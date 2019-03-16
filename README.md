@@ -26,6 +26,6 @@ if you evaluate  `p = 1`, followed by `q = 0`, you will then be able to evaluate
 
 #### To-do
 * ~~Write a README~~
-* Swap nasty imperative style for pure functional monads
+* ~~Swap nasty imperative style for pure functional monads~~
 * Use more friendly operator symbols
 * Make a prompt

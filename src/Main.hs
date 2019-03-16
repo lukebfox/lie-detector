@@ -5,15 +5,17 @@ import LieDetector
 
 main :: IO()
 main = do
-  loop (M.fromList[("top",True),("bottom",False)])
-
+    loop (M.fromList [("top", True), ("bottom", False)])
 
 loop symTab = do
     str <- getLine
     if null str
-        then return ()
-        else let tokens = tokenise str
-                 tree = parse tokens
-                 (result, symTab') = evaluate tree symTab
-              in do print result
-                    loop symTab'
+    then return ()
+    else let toks  = tokenise str
+             tree  = parse toks
+             Ev act = evaluate tree
+             (result,symTab') = act symTab
+         in do
+             print result
+             loop symTab' 
+
